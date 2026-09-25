@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "node frontend/build.mjs",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://sentinelapi-backend-0iao.onrender.com/api/:path*"
+    },
+    {
+      "source": "/target/:path*",
+      "destination": "https://sentinelapi-backend-0iao.onrender.com/target/:path*"
+    },
+    {
+      "source": "/openapi.json",
+      "destination": "https://sentinelapi-backend-0iao.onrender.com/openapi.json"
+    }
+  ]
+}
